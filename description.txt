@@ -1,0 +1,30 @@
+=========================================================
+      SURGIX AR NEUROSURGERY HUD - TO'LIQ LOYIHA MAZMUNI
+=========================================================
+
+1. LOYIHA HAQIDA QISQACHA (OVERVIEW)
+Surgix - bu to'g'ridan-to'g'ri veb-brauzer orqali ishlovchi eng so'nggi texnologiyalarga asoslangan To'ldirilgan Borliq (AR - Augmented Reality) formatidagi neyroxirurgiya simulyatoridir. 
+Ushbu loyihaning maqsadi jarrohlarga, tibbiyot talabalariga bosh miya suyagini ochish (Trepanatsiya) jarayonini real sensorlar, sun'iy intellekt ko'rsatmalari va virtual 3D modellar orqali mashq qilish imkonini berishdir.
+
+2. LOYIHANING ASOSIY MEXANIKALARI
+- Ikki Qo'lni Kompyuter Ko'rishi Oqrali Boshqarish (Dual-Hand Tracking):
+  Loyiha Google'ning "MediaPipe Hands" va qo'shimcha "ResNet50" texnologiyasi aralashmasida ishlaydi. Vebkamera insonning o'ng va chap qo'lining barmoq bo'g'imlaridagi 21 xil nuqtani o'qiydi. Chap qo'l orqali 3D kallani ushlab aylantirish, o'ng qo'l ko'rsatkich va bosh barmog'ini birlashtirish (Pinch) orqali asboblarni (skalpel, qaychi, pinset) ushlash va operatsiya qilish mumkin.
+  
+- Sun'iy Intellekt Bosh Jarroh (Voice AI Mentor 5.3):
+  Loyiha shunchaki vizual emas! Foydalanuvchi mikrofon orqali AI Mentorga jarrohlik amaliyoti haqida savol berishi mumkin. STT (Nutqni matnga aylantirish) foydalanuvchi ovozini tahlil qilib API orqali eng so'nggi OpenRouter (5.3 LLM Model) tarmoqlariga jo'natadi. Mentor ovozli shaklda (TTS - Matnni ovozga o'quvchi mexanizm) to'g'ri maslahatlar beradi va xatolarni tuzatishga yordam beradi.
+
+- HUD va Kibernetik UI (Cyberpunk UI/UX):
+  Barcha menyu, sensor ko'rsatkichlari, vaqt va aniqlik yuz foiz ekran ustiga vizual qatlam (Glassmorphism layout) bo'lib joylashgan.
+
+3. O'YIN VA SIMULYATSIYA MANTIG'I
+- Navbat bilan ishlash: Foydalanuvchi stolda turgan asboblarni (Skalpel -> Qaychi -> Pinset) ketma-ketlikda to'g'ri olishi shart. Agar u noto'g'ri asbobni olsa, tizim ogohlantiradi va xatolik (Error) ballini yozadi.
+- Asbobni tekkizish: To'g'ri tanlangan asbob miyaning virtual markaziga tegizilsa jarayon qabul qilinadi.
+- Qon effektlari: Simulyatsiyada asboblar noo'rin tekkizilsa qon sachrash ehtimoli va animatsiyalari mavjud (Particle physics).
+- Muvaffaqiyat (Mission Success): Hamma asbob to'g'ri ishlatilganidan kegin Bosh Suyagi (cherep.glb) o'chadi va uning ostidan yashirin Miya (mozg.glb) paydo bo'ladi. Missiya yakunlanib tabrik ekrani chiqadi.
+
+4. FAYL ARXITEKTURASI VA XAVFSIZLIK
+- HTML, CSS va JS dan tuzilgan kod modullarga mukammal darajada ajratilgan bo'lib, o'qilishi juda oson.
+- Asosiy o'zgaruvchilar (qoidalar, API kaliti) `assets/js/core.js` da yashiringan. Barcha chizish va effekt ishlari esa `assets/js/engine.js` 2D Canvas orqali optimizatsiya qilingan holda 60FPS da bajariladi.
+- Premium tizim: UI ning eng yuqori qismida narxlar varag'i (Individual, Corporate student package) ko'rinishida qo'shimcha monetizatsiya imitaniyalari yozilgan.
+
+Surgix - bu tibbiyot, sun'iy intellekt, kompyuter grafikasi va interaktiv veb-dasturlashning bir nuqtada birlashgan go'zal mevasidir.

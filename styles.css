@@ -1,0 +1,204 @@
+:root {
+  --bg: #e8ecef;
+  --card: #ffffff;
+  --text: #1f2a37;
+  --muted: #667085;
+  --primary: #2563eb;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --border: #d0d7de;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-shell {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+}
+
+.sim-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.video-wrap,
+.scene-wrap {
+  position: relative;
+  min-height: 420px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+#inputVideo,
+#trackingCanvas,
+#brainCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#inputVideo {
+  object-fit: cover;
+  transform: none;
+}
+
+#trackingCanvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.camera-label {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+.warning-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(220, 38, 38, 0.92);
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 6px;
+  z-index: 5;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.side-panel {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.side-panel h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.instrument-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.instrument-btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.instrument-btn.active {
+  background: #dbeafe;
+  border-color: #93c5fd;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.metric-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.final-panel {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.48);
+  display: grid;
+  place-items: center;
+  z-index: 15;
+}
+
+.final-content {
+  background: #fff;
+  width: min(540px, 92vw);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+#finalBreakdown {
+  color: var(--muted);
+  margin: 12px 0;
+}
+
+@media (max-width: 1100px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sim-area {
+    grid-template-columns: 1fr;
+  }
+}
